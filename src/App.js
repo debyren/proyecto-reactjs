@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+
 import './App.css';
+import NavBar from './components/navBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import logosh from './components/navBar/assets/icon2.jpg';
+import ItemList from './components/ItemList/ItemList'
 
 function App() {
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar className= "nav"
+      imagen= {logosh}
+      />
+      <ItemListContainer />
+      <div className="Item">
+      <ItemList 
+          titulo="Sabanas"
+          precio={11000}
+          detalle="Sabanas 180 hilos"
+          imgn= 'https://suarezhome.netlify.app/Imagenes/sabanas.jpg'
+        />
+          <ItemList 
+          titulo="Acolchados"
+          precio={10000}
+          detalle="Acolchado 2 plazas y media"
+          imgn= 'https://suarezhome.netlify.app/Imagenes/acolchados.jpg'
+        />
+          <ItemList 
+          titulo="Juego de Toallas"
+          precio={5000}
+          detalle="juego de toallas 500gr"
+          imgn= 'https://suarezhome.netlify.app/Imagenes/toallas.jpg'
+        />
+        </div>
     </div>
   );
 }
