@@ -1,9 +1,23 @@
+import React, { useState, useEffect } from "react";
 import '../ItemListContainer/ItemListContainer.css'
 
+import ItemData from '../ItemData/ItemData';
+import getItems from "../../services/mock";
+
 function ItemListContainer() {
+  const [products, setProducts] = useState([]);
+  useEffect( () => {
+    getItems(itemid).then((respuesta) => {
+      setProducts(respuesta);
+    });
+   }, [])
+  
+
   return (
-    <div className='itemList'>Bienvenidos a Suarez Home</div>
-  )
+    <>
+      <ItemData products={products} />
+    </>
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;

@@ -1,20 +1,26 @@
+import { Link } from 'react-router-dom';
 import './ItemList.css'
-function Item({ titulo, precio, detalle, imgn }) {
+
+
+function Item({id,  title, price, detaile, imgurl }) {
+  let urlDetail = '/item/' + id;
     return (
-      <div >
+      <div  >
         <div >
-          <h2>{titulo}</h2>
+          <h2>{title}</h2>
         </div>
         <div >
-          <img src={imgn} alt="imagen"></img>
+          <img src={imgurl} alt="imagen"></img>
         </div>
         <div >
-          <h4>$ {precio}</h4>
-          <p>{detalle}</p>
-          <button>Comprar</button>
+          <h4>$ {price}</h4>
+          <p>{detaile}</p>
+          <Link to={urlDetail}>
+          <button>Ver mas</button>
+          </Link>
         </div>
       </div>
     );
   }
-  
   export default Item;
+

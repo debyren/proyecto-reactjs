@@ -1,6 +1,6 @@
 import './NavBar.css'
 import CartWidget from '../cartWidget/CartWidget';
-
+import { Link } from 'react-router-dom';
 function NavBar(props){
    const {imagen} = props;
     return (
@@ -11,21 +11,21 @@ function NavBar(props){
         <ul className="list-nav">
             
             <li >
-               <a href="#"> Sabanas </a>
+               <Link to="#"> Sabanas </Link>
                 </li>
             <li >
-               <a href="#"> Covers </a>
+               <Link to="#"> Covers </Link>
                 </li>
             <li >
-               <a href="#"> Acolchados </a>
+               <Link to="#"> Acolchados </Link>
                 </li>
                 <li >
-               <a href="#"> Toallas </a>
+               <Link to="#"> Toallas </Link>
                 </li>
                 <li>
-              <a>
+              <li>
                 <CartWidget />
-              </a>
+              </li>
             </li>
         </ul>
         
