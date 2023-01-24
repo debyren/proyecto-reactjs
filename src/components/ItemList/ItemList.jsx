@@ -3,7 +3,7 @@ import './ItemList.css'
 
 
 function Item({id,  title, price, detaile, imgurl }) {
-  let urlDetail = '/item/' + id;
+  let urlDetail =  `/item/${id} `;
     return (
       <div  >
         <div >

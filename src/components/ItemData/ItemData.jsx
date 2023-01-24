@@ -1,11 +1,11 @@
-import ItemList from "../ItemList/ItemList";
+import Item from "../ItemList/ItemList";
 
 function ItemData(props) {
   return (
     <div className='Item' >
       {props.products.map((item) => (
        
-        <item
+        <Item
           key={item.id}
           id={item.id}
           title={item.title}

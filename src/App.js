@@ -13,11 +13,12 @@ function App() {
     <div className="App">
 
       <NavBar className= "nav"
-      imagen= {logosh}
-      />
+      imagen= {logosh} Route path='/' element= {<ItemListContainer />}/>
+    
       <Routes>
         <Route path='/' element={<ItemListContainer />}/>
-        <Route path='/item/:id' element={<ItemDetailContainer  />}/>
+        <Route path='/category/:categoryid' element={<ItemListContainer />}/>
+        <Route path='/item/:itemid' element={<ItemDetailContainer  />}/>
         </Routes>
     </div>
     

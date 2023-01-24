@@ -1,26 +1,32 @@
 import './NavBar.css'
 import CartWidget from '../cartWidget/CartWidget';
 import { Link } from 'react-router-dom';
+
+
 function NavBar(props){
+  
    const {imagen} = props;
     return (
+      
         <div className="nav">
             <div>
-<img className='logo' src= {imagen} alt="logo" />
+            
+ <Link to="/">
+    <img className='logo' src= {imagen} alt="logo" />
+ </Link>
             </div>
+          
         <ul className="list-nav">
             
             <li >
-               <Link to="#"> Sabanas </Link>
+               <Link to={'/category/sabanas'}> Sabanas </Link>
                 </li>
+            
             <li >
-               <Link to="#"> Covers </Link>
-                </li>
-            <li >
-               <Link to="#"> Acolchados </Link>
+               <Link to={'/category/acolchados'}> Acolchados </Link>
                 </li>
                 <li >
-               <Link to="#"> Toallas </Link>
+               <Link to={'/category/toallas'}> Toallas </Link>
                 </li>
                 <li>
               <li>

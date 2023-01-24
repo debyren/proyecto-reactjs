@@ -5,13 +5,14 @@ import { getSingleItem } from "../services/mock";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
+
   let { itemid } = useParams();
-  
+
   useEffect(() => {
     getSingleItem(itemid).then((respuesta) => {
       setProduct(respuesta);
     });
-  }, []);
+  }, [itemid]);
 
     return (
       <>
