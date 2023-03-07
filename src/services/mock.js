@@ -6,6 +6,7 @@ const dataItems = [{
     price: 11000,
     imgurl: 'https://suarezhome.netlify.app/Imagenes/sabanas.jpg',
     detail: "Sabanas de 180hilos 50% algodon, 50% poliester excelente calidad",
+    discount: 25,
 },
 {
   id: 2,
@@ -15,6 +16,7 @@ const dataItems = [{
   price: 15000,
   imgurl: 'https://suarezhome.netlify.app/Imagenes/sabanas.jpg',
   detail: "Sabanas de 180hilos 50% algodon, 50% poliester excelente calidad",
+  
 },
 {
   id: 3,
@@ -42,6 +44,7 @@ const dataItems = [{
   price: 10000,
   imgurl: 'https://suarezhome.netlify.app/Imagenes/acolchados.jpg',
   detail: "Acolchados de todos los tamaños y excelente calidad",
+  discount: 15,
 },
 {
   id: 6,
@@ -85,7 +88,7 @@ function getItems() {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(dataItems);
-      }, 1);
+      }, 1500);
     });
   }
   

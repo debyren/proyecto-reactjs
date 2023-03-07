@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import './ItemList.css'
 
 
-function Item({id,  title, price, detaile, imgurl }) {
+function Item({id,  title, price, detaile, imgurl, discount }) {
   let urlDetail =  `/item/${id} `;
+
+  
+  let priceDesc = `fuente ${discount ? "precioDesc" : ""}`;
+
     return (
       <div  >
         <div >
@@ -13,7 +17,10 @@ function Item({id,  title, price, detaile, imgurl }) {
           <img src={imgurl} alt="imagen"></img>
         </div>
         <div >
-          <h4>$ {price}</h4>
+          <h4 className={priceDesc}> $ {price}</h4>
+          {discount && (
+            <span style={{ color: "green" }}> Descuento: {discount}%</span>
+          )}
           <p>{detaile}</p>
           <Link to={urlDetail}>
           <button>Ver mas</button>
